@@ -1,17 +1,14 @@
 {
+  "name": "@ph/validator",
+  "version": "0.1.0",
+  "exports": "./src/mod.ts",
+
   "tasks": {
     "test": "deno test -A --hide-stacktraces --trace-leaks --doc ./src/*.test.ts",
     "cache": "deno cache --reload ./src/mod.ts",
     "fmt": "deno fmt ./src/*",
     "lint": "deno lint --json ./src/*"
   },
-
-  "exclude": [
-    "./**/*",
-    "!./src/**/*",
-    "!./*.md",
-    "!./*.json*"
-  ],
 
   "test": {
     "include": ["**/*.test.ts"]
