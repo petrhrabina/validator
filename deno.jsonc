@@ -1,7 +1,22 @@
 {
   "name": "@ph/validator",
-  "version": "0.1.0",
-  "exports": "./src/mod.ts",
+  "version": "0.1.1",
+  "exports": {
+    ".": "./src/mod.ts",
+    "./builder": "./src/Builder.ts",
+    "./preset": "./src/Preset.ts",
+    "./quantifiers": "./src/Quantifiers.ts",
+    "./test": "./src/Test.ts",
+    "./assert": "./src/Assert.ts"
+  },
+
+  "publish": {
+    "exclude": [
+      "./deno.jsonc",
+      "./deno.lock",
+      "./.github"
+    ]
+  },
 
   "tasks": {
     "test": "deno test -A --hide-stacktraces --trace-leaks --doc ./src/*.test.ts",
