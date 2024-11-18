@@ -1,0 +1,45 @@
+{
+  "tasks": {
+    "test": "deno test -A --hide-stacktraces --trace-leaks --doc ./src/*.test.ts",
+    "cache": "deno cache --reload ./src/mod.ts",
+    "fmt": "deno fmt ./src/*",
+    "lint": "deno lint --json ./src/*"
+  },
+
+  "exclude": [
+    "./**/*",
+    "!./src/**/*",
+    "!./*.md",
+    "!./*.json*"
+  ],
+
+  "test": {
+    "include": ["**/*.test.ts"]
+  },
+
+  "lint": {
+    "report": "pretty",
+    "rules": {
+      "tags": ["recommended"]
+    }
+  },
+
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 90,
+    "indentWidth": 4,
+    "singleQuote": true,
+    "semiColons": true,
+    "proseWrap": "always"
+  },
+
+  "compilerOptions": {
+    "strict": true
+  },
+
+  "lock": true,
+  "imports": {
+    "@std/assert": "jsr:@std/assert@^1",
+    "@std/testing": "jsr:@std/testing@^1.0.5"
+  }
+}

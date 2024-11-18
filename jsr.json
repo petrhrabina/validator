@@ -1,0 +1,16 @@
+{
+
+    
+    "name": "@ph/validator",
+    "version": "1.0.0",
+    "exports": "./src/mod.ts",
+    "publish": {
+        "include": [
+            "./src/*",
+            "./readme.md",
+            "./licence",
+            "./changelog"
+        ]
+    }
+    
+}
